@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.clear-fix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.wrapper {
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+.header {
+    width: 400px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.header-left {
+    width: 100px;
+    height: 100px;
+    float: left;
+    background: #ccffcc;
+}
+
+.header-mid {
+    width: 200px;
+    height: 100px;
+    float: left;
+    background: #ffcccc;
+}
+
+.header-right {
+    width: 100px;
+    height: 100px;
+    float: left;
+    background: #ccccff;
+}
+
+.main {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.main-top {
+    width: 400px;
+    height: 200px;
+}
+
+.main-top-left {
+    width: 100px;
+    height: 200px;
+    background: #cccccc;
+    float: left;
+}
+
+.main-top-mid {
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+
+.main-top-mid-box1 {
+    width: 100px;
+    height: 100px;
+    float: left;
+    background: #ccccff;
+}
+
+.main-top-mid-box2 {
+    width: 100px;
+    height: 100px;
+    float: left;
+    background: #cccccc;
+}
+
+.main-top-mid-box3 {
+    width: 100px;
+    height: 100px;
+    float: left;
+    background: #ffcccc;
+}
+
+.main-top-mid-box4 {
+    width: 100px;
+    height: 100px;
+    float: left;
+    background: #ccffcc;
+}
+
+/* 主题上部分右边*/
+.main-top-right {
+    width: 100px;
+    height: 200px;
+    float: left;
+}
+
+.main-top-right-top {
+    width: 100px;
+    height: 100px;
+    float: left;
+    background: #ccffcc;
+}
+
+.main-top-right-bottom {
+    width: 100px;
+    height: 100px;
+    float: left;
+    background: #cccccc;
+}
+
+.main-bottom {
+    width: 400px;
+    height: 200px;
+}
+
+.main-bottom-left {
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+
+.main-bottom-left-left{
+    width: 100px;
+    height: 200px;
+    float: left;
+    background: #ffcccc;
+}
+
+.main-bottom-left-right {
+    width: 100px;
+    height: 200px;
+    float: left;
+    background: #cccccc;
+}
+
+.main-button-right {
+    width: 200px;
+    height: 200px;
+}
+
+.main-bottom-right-top {
+    width: 200px;
+    height: 100px;
+    float: left;
+    background: #ffcccc;
+}
+
+.main-bottom-right-bottom {
+    width: 200px;
+    height: 100px;
+    float: left;
+}
+
+.main-bottom-right-bottom-left {
+    width: 100px;
+    height: 100px;
+    float: left;
+    background: #ccffcc;
+}
+
+.main-bottom-right-bottom-right {
+    width: 100px;
+    height: 100px;
+    float: left;
+    background: #ccccff;
+}
+
+.bottom {
+    width: 600px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.bottom-box {
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+
+
+
+.bottom-box1 {
+    background: #ccffcc;
+}
+
+.bottom-box2 {
+    background: #cccccc;
+}
+
+.bottom-box3 {
+    background: #ffcccc;
+}
+
+.bottom-box4 {
+    background: #ccccff;
+}
+
+.bottom-box5 {
+    background: #ccffcc;
+}
+
+.bottom-box6 {
+    background: #ffcccc;
+}

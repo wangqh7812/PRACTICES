@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用js实现倒三角形</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function triangle() {
+            document.write("<p align='center'>");
+            for (var i = 10; i > 0; i--) {
+                for (var j = 1; j <= i; j++) {
+                    document.write("&nbsp;&nbsp;" + "*" + "&nbsp;&nbsp;");
+                }
+                document.write("</br>");
+            }
+            document.write("</p>");
+        }
+
+        triangle();
+    </script>
+</body>
+</html>

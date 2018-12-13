@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒模型浮动布局</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="header-left">100*100</div>
+            <div class="header-mid">200*100</div>
+            <div class="header-right">100*100</div>
+        </div>
+        <div class="main">
+            <div class="main-top clear-fix">
+                <div class="main-top-left">100*200</div>
+                <div class="main-top-mid">
+                    <div class="main-top-mid-box1">100*100</div>
+                    <div class="main-top-mid-box2">100*100</div>
+                    <div class="main-top-mid-box3">100*100</div>
+                    <div class="main-top-mid-box4">100*100</div>
+                </div>
+                <div class="main-top-right">
+                    <div class="main-top-right-top">100*100</div>
+                    <div class="main-top-right-bottom">100*100</div>
+                </div>
+            </div>
+            <div class="main-bottom clear-fix">
+                <div class="main-bottom-left">
+                    <div class="main-bottom-left-left">100*200</div>
+                    <div class="main-bottom-left-right">100*200</div>
+                </div>
+                <div class="main-bottom-right">
+                    <div class="main-bottom-right-top">200*100</div>
+                    <div class="main-bottom-right-bottom">
+                        <div class="main-bottom-right-bottom-left">100*100</div>
+                        <div class="main-bottom-right-bottom-right">100*100</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="bottom-box1 bottom-box">100*100</div>
+            <div class="bottom-box2 bottom-box">100*100</div>
+            <div class="bottom-box3 bottom-box">100*100</div>
+            <div class="bottom-box4 bottom-box">100*100</div>
+            <div class="bottom-box5 bottom-box">100*100</div>
+            <div class="bottom-box6 bottom-box">100*100</div>
+        </div>
+    </div>
+</body>
+</html>

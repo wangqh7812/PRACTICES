@@ -4,10 +4,15 @@
     text-align: center;
 }
 
+.clear-fix {
+    zoom: 1;
+}
+
 .clear-fix::after {
     content: "";
     clear: both;
-    display: table;
+    display: block;
+    visibility: hidden;
 }
 
 .wrapper {
@@ -95,7 +100,7 @@
     background: #ccffcc;
 }
 
-/* 主题上部分右边*/
+/* 主体上部分右边*/
 .main-top-right {
     width: 100px;
     height: 200px;
@@ -105,14 +110,14 @@
 .main-top-right-top {
     width: 100px;
     height: 100px;
-    float: left;
+    /*float: left;*/
     background: #ccffcc;
 }
 
 .main-top-right-bottom {
     width: 100px;
     height: 100px;
-    float: left;
+    /*float: left;*/
     background: #cccccc;
 }
 
@@ -142,8 +147,9 @@
 }
 
 .main-button-right {
-    width: 200px;
-    height: 200px;
+    /*width: 200px;*/
+    /*height: 200px;*/
+    float: left;
 }
 
 .main-bottom-right-top {
@@ -184,8 +190,6 @@
     height: 100px;
     float: left;
 }
-
-
 
 .bottom-box1 {
     background: #ccffcc;

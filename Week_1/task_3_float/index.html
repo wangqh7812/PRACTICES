@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="header">
+        <div class="header clear-fix">
             <div class="header-left">100*100</div>
             <div class="header-mid">200*100</div>
             <div class="header-right">100*100</div>
@@ -16,13 +16,14 @@
         <div class="main">
             <div class="main-top clear-fix">
                 <div class="main-top-left">100*200</div>
-                <div class="main-top-mid clear-fix">
+                <div class="main-top-mid"><!--因为父子元素都是浮动元素，所以子元素可以撑开父元素，具体见README-->
                     <div class="main-top-mid-box1">100*100</div>
                     <div class="main-top-mid-box2">100*100</div>
                     <div class="main-top-mid-box3">100*100</div>
                     <div class="main-top-mid-box4">100*100</div>
                 </div>
                 <div class="main-top-right">
+                    <!--因为是上下结构，div会另起一行，所以不需要设置浮动-->
                     <div class="main-top-right-top">100*100</div>
                     <div class="main-top-right-bottom">100*100</div>
                 </div>
@@ -34,14 +35,15 @@
                 </div>
                 <div class="main-bottom-right">
                     <div class="main-bottom-right-top">200*100</div>
-                    <div class="main-bottom-right-bottom">
+                    <!--因为main-bottom-right-bottom不是浮动元素，它的子元素是，所以需要清除浮动-->
+                    <div class="main-bottom-right-bottom clear-fix">
                         <div class="main-bottom-right-bottom-left">100*100</div>
                         <div class="main-bottom-right-bottom-right">100*100</div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="bottom">
+        <div class="bottom clear-fix">
             <div class="bottom-box1 bottom-box">100*100</div>
             <div class="bottom-box2 bottom-box">100*100</div>
             <div class="bottom-box3 bottom-box">100*100</div>

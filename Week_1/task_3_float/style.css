@@ -4,6 +4,7 @@
     text-align: center;
 }
 
+/*清除浮动*/
 .clear-fix {
     zoom: 1;
 }
@@ -17,13 +18,11 @@
 
 .wrapper {
     width: 600px;
-    height: 600px;
     margin: 0 auto;
 }
 
 .header {
     width: 400px;
-    height: 100px;
     margin: 0 auto;
 }
 
@@ -50,13 +49,11 @@
 
 .main {
     width: 400px;
-    height: 400px;
     margin: 0 auto;
 }
 
 .main-top {
     width: 400px;
-    height: 200px;
 }
 
 .main-top-left {
@@ -66,9 +63,9 @@
     float: left;
 }
 
+/*接下来是父元素浮动，子元素也浮动，那子元素可以撑开父元素高度，这样就不用清除浮动了*/
 .main-top-mid {
     width: 200px;
-    height: 200px;
     float: left;
 }
 
@@ -100,13 +97,13 @@
     background: #ccffcc;
 }
 
-/* 主体上部分右边*/
 .main-top-right {
     width: 100px;
     height: 200px;
     float: left;
 }
 
+/*因为div是块级元素，会另起一行，所以不需要浮动也可以实现同样的效果*/
 .main-top-right-top {
     width: 100px;
     height: 100px;
@@ -123,12 +120,12 @@
 
 .main-bottom {
     width: 400px;
-    height: 200px;
 }
 
+/*父子元素都是浮动元素，所以不用清除浮动*/
 .main-bottom-left {
     width: 200px;
-    height: 200px;
+    /*height: 200px;*/
     float: left;
 }
 
@@ -146,23 +143,26 @@
     background: #cccccc;
 }
 
-.main-button-right {
-    /*width: 200px;*/
+/*同上*/
+.main-bottom-right {
+    width: 200px;
     /*height: 200px;*/
     float: left;
 }
 
+/*同上*/
 .main-bottom-right-top {
     width: 200px;
     height: 100px;
-    float: left;
+    /*float: left;*/
     background: #ffcccc;
 }
 
+/*因为这个不是浮动元素，所以不能都被子元素撑开*/
 .main-bottom-right-bottom {
     width: 200px;
-    height: 100px;
-    float: left;
+    /*height: 100px;*/
+    /*float: left;*/
 }
 
 .main-bottom-right-bottom-left {

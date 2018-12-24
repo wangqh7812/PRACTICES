@@ -1,4 +1,4 @@
-.job {
+.contact {
     width: 960px;
     height: 564px;
     margin-top: 10px;
@@ -7,7 +7,7 @@
     border-radius: 5px;
 }
 
-.job-title {
+.contact-title {
     width: 950px;
     height: 27px;
     line-height: 27px;
@@ -18,20 +18,20 @@
     margin-left: 5px;
 }
 
-.job-title span {
+.contact-title span {
     margin-left: 15px;
 }
 
-.job-title span a {
+.contact-title span a {
     font: 12px 微软雅黑, serif;
 }
 
-.job-title span:before {
+.contact-title span:before {
     content: url("../images/icon_1.png");
     margin-right: 7px;
 }
 
-.job-content {
+.contact-content {
     width: 940px;
     height: 522px;
     float: left;
@@ -39,7 +39,7 @@
     margin-left: 10px;
 }
 
-.job-content-title {
+.contact-content-title {
     width: 940px;
     height: 76px;
     line-height: 30px;
@@ -47,12 +47,12 @@
     box-sizing: border-box;
 }
 
-.job-content p {
+.contact-content p {
     text-align: center;
     font-size: 20px;
 }
 
-.job-content-text {
+.contact-content-text {
     width: 940px;
     height: 462px;
 }

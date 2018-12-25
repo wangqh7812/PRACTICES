@@ -1,5 +1,70 @@
 .estate {
     width: 960px;
     height: 774px;
-
+    background: #ffffff;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
 }
+
+.estate-title {
+    width: 950px;
+    height: 27px;
+    line-height: 27px;
+    background: #303338;
+    border-radius: 3px;
+    float: left;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.estate-title span {
+    margin-left: 15px;
+}
+
+.estate-title span a {
+    font: 12px 微软雅黑, serif;
+}
+
+.estate-title span:before {
+    content: url("../images/icon_1.png");
+    margin-right: 7px;
+}
+
+.estate-content {
+    width: 940px;
+    height: 725px;
+    float: left;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.estate-content-intro {
+    width: 940px;
+    height: 80px;
+    border-bottom: #b6b6b6 dotted 1px;
+    box-sizing: border-box;
+    float: left;
+}
+
+.estate-content-intro p {
+    padding: 10px;
+    text-indent: 28px;
+    font-size: 14px;
+    font-family: 微软雅黑, serif;
+}
+
+.estate-content-list {
+    width: 940px;
+    height: 645px;
+    float: left;
+}
+
+.estate-content-list li {
+    width: 940px;
+    height: 129px;
+    border-bottom: #b6b6b6 dotted 1px;
+    box-sizing: border-box;
+    float: left;
+}
+

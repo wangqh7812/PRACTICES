@@ -54,22 +54,5 @@
 
 .contact-content-text {
     width: 940px;
-    height: 430px;
-}
-
-.contact-content-text table {
-    width: 849px;
-    height: 239px;
-    margin: 20px auto;
-    border-collapse: collapse;
-    /*border: #318c5f solid 1px;*/
-    text-align: center;
-}
-
-table, table tr th, table tr td {
-    border: #318c5f solid 1px;
-}
-
-.th-bg {
-    background: #318c5f;
+    height: 462px;
 }

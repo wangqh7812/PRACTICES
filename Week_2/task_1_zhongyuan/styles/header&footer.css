@@ -71,9 +71,14 @@
 .nav-button {
     width: 980px;
     height: 34px;
-    border-top: #d2354e solid 1px;
-    box-sizing: border-box;
-    background: url("../images/nav.png") repeat-x 1px;
+    /*border-top: #d2354e solid 1px;*/
+    /*box-sizing: border-box;*/
+    text-align: center;
+    background: url("../images/nav_bg.png") repeat-x;
+}
+
+.nav-button ul {
+    display: inline-block;
 }
 
 .nav-button li {
@@ -85,11 +90,18 @@
     float: left;
 }
 
-.nav-button-active {
-    background: url("../images/nav_active.png") repeat-x;
-    border: #d2354e solid 1px;
+.nav-button li:hover{
+    background: url("../images/nav_bg_active.png") repeat-x;
+    border-left: #d2354e solid 1px;
+    border-right: #d2354e solid 1px;
     box-sizing: border-box;
-    border-top: none;
+}
+
+.nav-button-active {
+    background: url("../images/nav_bg_active.png") repeat-x;
+    border-left: #d2354e solid 1px;
+    border-right: #d2354e solid 1px;
+    box-sizing: border-box;
 }
 
 
@@ -97,6 +109,7 @@
 .footer {
     width: 980px;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .copyright {
@@ -116,4 +129,10 @@
     top: 50%;
     margin-left: -123px;
     margin-top: -13px;
+}
+
+.place-holder {
+    width: 960px;
+    height: 10px;
+    margin: 0 auto;
 }

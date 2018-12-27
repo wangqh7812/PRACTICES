@@ -71,3 +71,33 @@
     margin-top: 13px;
     margin-left: 5px;
 }
+
+.news-content-list {
+    width: 210px;
+    height: 20px;
+    /*line-height: 20px;*/
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.news-content-list ul {
+    display: inline-block;
+}
+
+.news-content-list li {
+    width: 17px;
+    height: 17px;
+    float: left;
+    margin: 0 12px;
+}
+
+.news-content-list-active {
+    border: #9dd3e2 solid 1px;
+    box-sizing: border-box;
+}
+
+.news-content-list li a {
+    color: #9dd3e2;
+}

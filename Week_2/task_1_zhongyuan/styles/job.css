@@ -1,0 +1,59 @@
+.job {
+    width: 960px;
+    height: 500px;
+    background: #ffffff;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.job-title {
+    width: 950px;
+    height: 27px;
+    line-height: 27px;
+    background: #303338;
+    border-radius: 3px;
+    float: left;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.job-title span {
+    margin-left: 15px;
+}
+
+.job-title span a {
+    font: 12px 微软雅黑, serif;
+}
+
+.job-title span:before {
+    content: url("../images/icon_1.png");
+    margin-right: 7px;
+}
+
+.job-content {
+    width: 940px;
+    height: 425px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+    position: relative;
+}
+
+.job-content-list1 {
+    margin-left: 20px;
+}
+
+.job-content-list1 h3 {
+    line-height: 40px;
+}
+
+.job-content-list1 h4 {
+    line-height: 30px;
+}
+
+.job-content-list1 li {
+    margin-left: 30px;
+    line-height: 20px;
+    list-style: decimal;
+}

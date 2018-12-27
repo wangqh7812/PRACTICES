@@ -1,0 +1,75 @@
+.contact {
+    width: 960px;
+    height: 564px;
+    margin-top: 10px;
+    margin-left: 10px;
+    background: #ffffff;
+    border-radius: 5px;
+}
+
+.contact-title {
+    width: 950px;
+    height: 27px;
+    line-height: 27px;
+    background: #303338;
+    border-radius: 3px;
+    float: left;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.contact-title span {
+    margin-left: 15px;
+}
+
+.contact-title span a {
+    font: 12px 微软雅黑, serif;
+}
+
+.contact-title span:before {
+    content: url("../images/icon_1.png");
+    margin-right: 7px;
+}
+
+.contact-content {
+    width: 940px;
+    height: 522px;
+    float: left;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.contact-content-title {
+    width: 940px;
+    height: 76px;
+    line-height: 30px;
+    border-bottom: #b6b6b6 dotted 1px;
+    box-sizing: border-box;
+}
+
+.contact-content p {
+    text-align: center;
+    font-size: 20px;
+}
+
+.contact-content-text {
+    width: 940px;
+    height: 430px;
+}
+
+.contact-content-text table {
+    width: 849px;
+    height: 239px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    /*border: #318c5f solid 1px;*/
+    text-align: center;
+}
+
+table, table tr th, table tr td {
+    border: #318c5f solid 1px;
+}
+
+.th-bg {
+    background: #318c5f;
+}

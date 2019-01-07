@@ -1,0 +1,19 @@
+.wrapper {
+    width: 6.4rem;
+    margin: 0 auto;
+}
+
+.header {
+    width: 6.4rem;
+    position: relative;
+}
+
+.header-title {
+    width: 6.4rem;
+    height: 0.8rem;
+    background: #000000;
+    opacity: 0.7;
+}
+
+.header
+

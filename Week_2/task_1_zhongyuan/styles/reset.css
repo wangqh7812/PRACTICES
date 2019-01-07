@@ -42,7 +42,7 @@ p {
 }
 
 .clear-fix {
-    *zoom: 1; //兼容IE6,IE7。因为IE6和7没有一些元素
+    *zoom: 1; /*兼容IE6,IE7。因为IE6和7没有一些元素*/
 }
 .clear-fix:after {
     display: block;

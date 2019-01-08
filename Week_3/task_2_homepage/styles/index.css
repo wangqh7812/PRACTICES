@@ -10,10 +10,72 @@
 
 .header-title {
     width: 6.4rem;
-    height: 0.8rem;
-    background: #000000;
-    opacity: 0.7;
+    height: 0.79rem;
+    /*line-height: 0.79rem;*/
+    background: rgba(0,0,0,0.7);
+    /*opacity: 0.7;*/
+    position: absolute;
+    z-index: 3;
+    text-align: center;
+    color: #ffffff;
+    font: 0.34rem 微软雅黑, serif;
 }
 
-.header
+.header-title-bee {
+    width: 0.54rem;
+    height: 0.57rem;
+    float: left;
+    margin-top: 0.11rem;
+    margin-left: 0.11rem;
+}
 
+/*.header-title h1 {*/
+    /*text-align: center;*/
+    /*color: #ffffff;*/
+    /*font: 0.34rem 微软雅黑, serif;*/
+    /*float: left;*/
+
+/*}*/
+
+.header-title-login {
+    width: 0.54rem;
+    height: 0.53rem;
+    float: right;
+}
+/*.header-title h1:before {*/
+    /*content: url("../images/logo_bee.png");*/
+    /*width: 0.54rem;*/
+    /*height: 0.57rem;*/
+/*}*/
+
+/*.header-title h1:after {*/
+    /*content: url("../images/login.png");*/
+    /*width: 0.54rem;*/
+    /*height: 0.53rem;*/
+/*}*/
+
+.banner {
+    width: 6.4rem;
+    height: 4.6rem;
+}
+
+.banner-pic {
+    width: 6.4rem;
+    height: 4.24rem;
+    position: absolute;
+    z-index: 2;
+}
+
+.banner-pic img {
+    width: 6.4rem;
+    height: 4.24rem;
+}
+
+.banner-title {
+    width: 6.4rem;
+    height: 3.45rem;
+    background: rgba(0,0,0,0.45);
+    position: absolute;
+    top: 0.79rem;
+    z-index: 3;
+}

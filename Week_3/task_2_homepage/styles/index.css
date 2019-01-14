@@ -284,7 +284,6 @@
 
 .live {
     width: 6.4rem;
-    height: 11rem;
     border-top: #e9e9e9 solid 0.01rem;
     border-bottom: #e9e9e9 solid 0.01rem;
     margin-top: 0.15rem;
@@ -293,6 +292,9 @@
 .live-title {
     width: 6.4rem;
     height: 0.68rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*.live-title span {*/
@@ -301,8 +303,8 @@
 /*}*/
 
 .live-title span:nth-of-type(1) {
-    display: inline-block;
-    vertical-align: middle;
+    /*display: inline-block;*/
+    /*vertical-align: middle;*/
     font-family: 微软雅黑, serif;
     font-size: 0.26rem;
     margin-left: 0.20rem;
@@ -319,6 +321,9 @@
 .live-title span:nth-of-type(3) {
     /*display: inline-block;*/
     /*vertical-align: middle;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 0.25rem;
     height: 0.25rem;
     font-size: 0.24rem;
@@ -357,23 +362,28 @@
     position: absolute;
     bottom: 0;
     right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .live-content-title p:nth-of-type(1) {
     color: #e2e2e2;
     font: 0.26rem 微软雅黑, serif;
+    width: 100%;
     text-align: center;
+
 }
 
 .live-content-title p:nth-of-type(2) {
     color: #b5b5b5;
     font: 0.15rem 微软雅黑, serif;
+    width: 100%;
     text-align: center;
 }
 
 .report {
     width: 6.4rem;
-    height: 8.7rem;
     margin-top: 0.15rem;
     border-top: #e9e9e9 solid 0.01rem;
     border-bottom: #e9e9e9 solid 0.01rem;
@@ -382,6 +392,8 @@
 .report-title {
     width: 6.4rem;
     height: 0.68rem;
+    display: flex;
+    align-items: center;
 }
 
 /*.live-title span {*/
@@ -390,8 +402,8 @@
 /*}*/
 
 .report-title span:nth-of-type(1) {
-    display: inline-block;
-    vertical-align: middle;
+    /*display: inline-block;*/
+    /*vertical-align: middle;*/
     font-family: 微软雅黑, serif;
     font-size: 0.26rem;
     margin-left: 0.20rem;
@@ -414,6 +426,9 @@
     margin-left: 0.10rem;
     color: #ffffff;
     background: #ff7200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .report li {
@@ -435,8 +450,30 @@
     height: 0.64rem;
     background: rgba(0,0,0,0.7);
     position: absolute;
-    z-index: -1;
     bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+.report-content-title span:nth-of-type(1) {
+    display: flex;
+    width: 0.25rem;
+    height: 0.25rem;
+    color: #ffffff;
+    font: 0.21rem 微软雅黑, serif;
+    background: #ff7200;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.75rem;
+}
+
+.report-content-title span:nth-of-type(2) {
+    display: flex;
+    color: #ffffff;
+    font: 0.25rem 微软雅黑, serif;
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    margin-left: 0.1rem;
 }
 
 .footer {
@@ -452,28 +489,71 @@
     float: left;
 }
 
+.footer-logo-box1 {
+    width: 1.8rem;
+    height: 0.66rem;
+    float: left;
+    margin-top: 0.20rem;
+    margin-left: 0.58rem;
+    border-right: #a6a6a6 solid 0.01rem;
+}
+
+.footer-logo-box1 img {
+    width: 0.54rem;
+    height: 0.57rem;
+    float: left;
+}
+
+.footer-logo-box1 p:nth-of-type(1) {
+    color: #e8801a;
+    font: 0.30rem 微软雅黑, serif;
+    float: left;
+    margin-left: 0.1rem;
+}
+
+.footer-logo-box1 p:nth-of-type(2) {
+    color: #e8801a;
+    font: 0.14rem 微软雅黑, serif;
+    float: left;
+    margin-left: 0.1rem;
+}
+
+.footer-logo-box2 {
+    width: 3.35rem;
+    height: 0.66rem;
+    float: left;
+    margin-top: 0.2rem;
+    margin-left: 0.2rem;
+
+}
+
+.footer-logo-box2 img {
+    width: 0.66rem;
+    height: 0.66rem;
+    float: left;
+}
+
+.footer-logo-box2 p {
+    font: 0.16rem 微软雅黑, serif;
+    width: 2.4rem;
+    height: 0.33rem;
+    line-height: 0.28rem;
+    float: left;
+    margin-left: 0.1rem;
+}
+
 .footer-copyright {
     width: 6.4rem;
     height: 0.44rem;
     float: left;
     background: #2c2c2c;
+    display: flex;
+    align-items: center;
 }
 
-.footer-logo-box1 {
-    width: 1.3rem;
-    height: 0.56rem;
-    float: left;
-    margin-left: 1.5rem;
-    border-left: #a6a6a6 solid 0.01rem;
-}
-
-.footer-logo-box1:before {
-    content: url("../images/logo_bee.png");
-}
-
-.footer-logo-box2 {
-    width: 2.6rem;
-    height: 0.56rem;
-    float: left;
-    margin-left: 1rem;
+.footer-copyright p {
+    width: 100%;
+    color: #ffffff;
+    font: 0.16rem 微软雅黑, serif;
+    text-align: center;
 }

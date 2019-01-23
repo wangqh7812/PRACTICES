@@ -8,15 +8,15 @@
     <div class="wrapper"><!--wrapper开始-->
         <div class="header">
             <span><</span>
-            <span>登录</span>
+            <span>注册</span>
             <span>…</span>
         </div>
         <div class="banner">
             <div class="banner-pic1">
-                <img src="images/sign_in/banner_pic_1.png" alt="background">
+                <img src="images/sign_up/banner_pic_1.png" alt="background">
             </div>
             <div class="banner-pic2">
-                <img src="images/sign_in/banner_pic_2.png" alt="women">
+                <img src="images/sign_up/banner_pic_2.png" alt="women">
             </div>
             <div class="banner-title">
                 <p>家装监理装小蜜</p>
@@ -24,28 +24,44 @@
             </div>
         </div>
         <div class="type-in">
-            <div class="alert-text">
-                <span>
-                    <img src="images/sign_in/alert.png" alt="alert">
-                </span>
-                <span>登录手机号不能为空</span>
-            </div>
             <div class="type-in-area">
-                <label>
-                    <input type="text" value="手机号">
+                <label for="tel-num">
+                    <input id="tel-num" type="text" value="手机号">
                 </label>
-                <label>
-                    <input type="text" value="密码">
+                <div class="judge">
+                    <img src="images/sign_up/judge.png" alt="judge">
+                </div>
+                <label for="input-password">
+                    <input id="input-password" type="password" value="输入密码">
                 </label>
-                <label>
-                    <input type="text" value="验证码">
+                <label for="certain-password">
+                    <input id="certain-password" type="password" value="确认密码">
                 </label>
-                <div class="verification-code">35XP</div>
-                <lable>
-                    <input type="checkbox">记住密码
-                </lable>
+                <label for="activation-code">
+                    <input id="activation-code" type="text" value="手机激活码">
+                </label>
+                <div class="activation-btn">获取激活码</div>
+                <label for="check-box">
+                    <input id="check-box" type="checkbox" checked="checked">我已阅读并同意遵守《装小蜜用户服务协议》
+                </label>
+                <div class="sign-in-btn">已有帐号，直接登录</div>
+                <div class="sign-up-btn">确认注册</div>
             </div>
-
+            <div class="other-btn">
+                <div class="other-btn-title">使用以下帐号直接登录</div>
+                <div class="weibo-btn">
+                    <img src="images/sign_up/weibo.png" alt="weibo">
+                </div>
+                <div class="qq-btn">
+                    <img src="images/sign_up/qq.png" alt="qq">
+                </div>
+                <div class="weixin-btn">
+                    <img src="images/sign_up/weixin.png" alt="weixin">
+                </div>
+                <div class="douban-btn">
+                    <img src="images/sign_up/douban.png" alt="douban">
+                </div>
+            </div>
         </div>
     </div><!--wrapper结束-->
 </body>

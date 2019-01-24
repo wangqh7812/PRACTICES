@@ -1,0 +1,75 @@
+.wrapper {
+    max-width: 10rem;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 0.78rem;
+    background: #2c2c2c;
+}
+
+.header span:nth-of-type(1) {
+    font-size: 0.56rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-left: 0.27rem;
+}
+
+.header span:nth-of-type(2) {
+    width: 100%;
+    text-align: center;
+    font-size: 0.36rem;
+    font-family: 微软雅黑, serif;
+    color: #ffffff;
+}
+
+.header span:nth-of-type(3) {
+    font-size: 0.56rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-right: 0.27rem;
+}
+
+.banner {
+    width: 100%;
+    height: 2.92rem;
+    position: relative;
+}
+
+.banner-pic1 {
+    width: 100%;
+    height: 3.70rem;
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+}
+
+.banner-pic1-decorate {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    z-index: 2;
+
+}
+
+.banner-pic1 img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.banner-pic2 {
+    width: 2.74rem;
+    height: 2.92rem;
+    margin-left: 0.42rem;
+}
+
+.banner-pic2 img {
+    width: 2.74rem;
+    height: 2.92rem;
+}

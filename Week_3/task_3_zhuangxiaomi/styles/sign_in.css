@@ -53,7 +53,6 @@
     background: rgba(0,0,0,0.5);
     position: absolute;
     z-index: 2;
-
 }
 
 .banner-pic1 img {
@@ -64,12 +63,15 @@
 }
 
 .banner-pic2 {
-    width: 2.74rem;
+    width: 42.81%;
     height: 2.92rem;
     position: absolute;
     z-index: 3;
-    left: 0.42rem;
+    left: 6.56%;
     bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .banner-pic2 img {
@@ -79,10 +81,12 @@
 
 
 .banner-title {
+    width: 44.06%;
     position: absolute;
-    left: 3.1rem;
+    right: 6.56%;
     bottom: 50%;
     margin-bottom: -0.52rem;
+    text-align: center;
 }
 
 .banner-title p {
@@ -93,6 +97,7 @@
     color: #ffffff;
     margin-top: 0.1rem;
     margin-bottom: 0.1rem;
+
 }
 
 .main {

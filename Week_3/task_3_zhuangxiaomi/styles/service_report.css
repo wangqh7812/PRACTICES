@@ -79,8 +79,8 @@
 
 .main-content-text p {
     line-height: 0.36rem;
-    margin-top: 0.30rem;
-    margin-bottom: 0.30rem;
+    margin: 0.30rem 0.20rem;
+    /*margin-bottom: 0.30rem;*/
 }
 
 .main-content-text img {
@@ -136,6 +136,8 @@
     width: 0.48rem;
     height: 0.48rem;
 }
+
+/*      评论部分开始      */
 
 .comments {
     width: 100%;
@@ -253,10 +255,153 @@
     margin-right: 0.45rem;
 }
 
-.comments-out-content-bottom span:nth-of-type(4) {
+.comments-out-content-bottom span:nth-of-type(4) img{
     float: right;
     width: 0.29rem;
     height: 0.28rem;
     margin-right: 0.15rem;
 }
 
+/*      主评论部分结束     */
+
+/*      副评论部分开始     */
+
+
+.comments-in {
+    width: 91.41%;
+    margin: 0 auto;
+}
+
+.comments-in-box {
+    width: 87.35%;
+    float: right;
+}
+
+.comments-in-content {
+    width: 100%;
+    height: 1.70rem;
+    border: #e6e6e6 0.02rem solid;
+}
+
+.comments-in-content-top {
+    width: 93.54%;
+    margin: 0.15rem auto 0;
+    color: #797979;
+    font-size: 0.21rem;
+    line-height: 0.26rem;
+}
+
+.comments-in-content-top span:nth-of-type(1) {
+    float: left;
+}
+
+.comments-in-content-top span:nth-of-type(2) img {
+    width: 0.18rem;
+    height: 0.16rem;
+    float: left;
+    margin-top: 0.05rem;
+    margin-left: 0.05rem;
+}
+
+.comments-in-content-top span:nth-of-type(3) {
+    float: left;
+    margin-left: 0.1rem;
+}
+
+.comments-in-content-top span:nth-of-type(4) {
+    float: left;
+    margin-left: 0.1rem;
+}
+
+.comments-in-content-main {
+    width: 93.54%;
+    margin: 0.15rem auto 0;
+    color: #595959;
+    font-size: 0.22rem;
+    line-height: 0.30rem;
+}
+
+.comments-in-content-bottom {
+    width: 93.54%;
+    margin: 0.15rem auto 0;
+    color: #797979;
+    font-size: 0.18rem;
+    line-height: 0.26rem;
+}
+
+.comments-in-content-bottom span:nth-of-type(1) {
+    float: left;
+}
+
+.comments-in-content-bottom span:nth-of-type(2) img {
+    float: right;
+    width: 0.31rem;
+    height: 0.30rem;
+}
+
+.comments-in-content-bottom span:nth-of-type(3) {
+    float: right;
+    color: #fe7a0f;
+    margin-right: 0.45rem;
+}
+
+.comments-in-content-bottom span:nth-of-type(4) img{
+    float: right;
+    width: 0.29rem;
+    height: 0.28rem;
+    margin-right: 0.15rem;
+}
+
+.comments-in-content2 {
+    border-top: none;
+    margin-bottom: 0.30rem;
+}
+
+.comments-loading {
+    width: 100%;
+    height: 1.90rem;
+    font-size: 0.24rem;
+    line-height: 0.32rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.comments-loading img {
+    width: 0.72rem;
+    height: 0.72rem;
+}
+
+.footer {
+    width: 100%;
+    height: 0.75rem;
+    background: #ffa751;
+    color: #ffffff;
+    font-size: 0.26rem;
+    font-weight: bold;
+}
+
+.sign-in-or-on {
+    float: left;
+    margin-top: 0.25rem;
+    margin-left: 0.50rem;
+}
+
+.type-comments {
+    float: right;
+    margin-top: 0.18rem;
+    margin-right: 0.50rem;
+}
+
+.type-comments img {
+    width: 0.40rem;
+    height: 0.40rem;
+    float: left;
+}
+
+.type-comments span:nth-of-type(2) {
+    float: left;
+    margin-top: 0.07rem;
+    margin-left: 0.20rem;
+}

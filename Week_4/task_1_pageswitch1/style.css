@@ -7,6 +7,11 @@ li {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
 .box {
     width: 1250px;
     height: 717px;
@@ -25,20 +30,43 @@ li {
 
 .pic-list {
     position: absolute;
+    width: 120px;
     top: 0;
     right: 0;
 }
 
 .pic-list li {
+    float: right;
     width: 100px;
     height: 33px;
     margin-top: 30px;
     font-size: 16px;
     font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
     background: rgba(255,255,255,0.5);
+}
+
+.active {
+    width: 120px !important;
+    background: rgba(128,128,128,0.5);
+}
+
+.pic-list li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.pic-list li a:link, .pic-list li a:visited {
+    color: #000000;
+}
+
+.pic-list li a:hover, .pic-list li a:active{
+    background: rgba(128,128,128,0.5);
 }
 
 .title-placeholder {

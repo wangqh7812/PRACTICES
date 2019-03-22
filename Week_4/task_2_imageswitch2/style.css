@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.clear-fix {
+    *zoom: 1; /*兼容IE6,IE7。因为IE6和7没有一些元素*/
+}
+
+.clear-fix:after {
+    display: block;
+    content: '';
+    clear: both;
+    height: 0;
+}
+
+.box {
+    width: 1250px;
+    height: 717px;
+    position: relative;
+    overflow: hidden;
+}
+
+.pic-big {
+    width: 100%;
+    height: 100%;
+}
+
+.pic-big li {
+    float: left;
+    width: 1250px;
+    height: 717px;
+}
+
+.pic-big li img {
+    width: 1250px;
+    height: 717px;
+}
+
+.pic-title {
+    width: 100%;
+    height: 33px;
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    bottom: 120px;
+}
+
+.pic-title p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.pic-small {
+    width: 100%;
+    height: 100px;
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    bottom: 0;
+}
+
+.pic-small li {
+    width: 11.11%;
+    height: 100px;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pic-small li img {
+    width: 125px;
+    height: 72px;
+}
+
+.active {
+    border: 3px solid #000fff;
+}

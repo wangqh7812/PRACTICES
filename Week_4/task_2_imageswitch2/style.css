@@ -58,23 +58,28 @@ li {
 }
 
 .pic-small {
-    width: 100%;
+    width: 1250px;
     height: 100px;
     background: rgba(0,0,0,0.5);
     position: absolute;
     bottom: 0;
 }
 
-.pic-small li {
-    width: 11.11%;
+.pic-small ul {
+    width: 1220px;
     height: 100px;
-    float: left;
+    margin: 0 auto;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
 }
 
-.pic-small li img {
+.pic-small ul li {
+    width: 125px;
+    height: 72px;
+}
+
+.pic-small ul li img {
     width: 125px;
     height: 72px;
 }

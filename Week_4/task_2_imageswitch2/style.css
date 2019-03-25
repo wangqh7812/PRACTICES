@@ -22,12 +22,17 @@ li {
     width: 1250px;
     height: 717px;
     position: relative;
-    overflow: hidden;
 }
 
 .pic-big {
-    width: 100%;
-    height: 100%;
+    width: 1250px;
+    height: 717px;
+    overflow: hidden;
+}
+
+.pic-big ul {
+    width: 11250px;
+    height: 717px;
 }
 
 .pic-big li {

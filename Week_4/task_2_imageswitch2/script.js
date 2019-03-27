@@ -1,13 +1,18 @@
 var outBox = document.getElementById("outer");
 var inBox = document.getElementById("inner");
 var inBoxLi = inBox.getElementsByTagName("li");
+
+var smallPic =
+
 var oBtn = document.getElementById("start");
 
+// inBox.innerHTML += inBox.innerHTML;
 inBox.style.width = inBoxLi.length * 1250 + "px";   //设置ul的宽度
+// console.log(inBox.offsetWidth);
 
-//多次滚动
+//实现多次滚动并且带索引
 var timer = null;
-var timerIndex = null;
+var indexTimer = null;
 var index = 0 ;
 
 function startMove(endPos) {
@@ -18,7 +23,7 @@ function startMove(endPos) {
         clearInterval(timer);
     }
 
-    timer = setInterval(move, 1000);
+    timer = setInterval(move, 20);
 
     function move() {
         speed = (endPos - startPos) / 10;
@@ -36,27 +41,75 @@ function startMove(endPos) {
     }
 }
 
-// function rollIndex() {
-//     index++;
-//     if (index === 9) {
-//         index = 0
-//     }
-//     startMove = (index * 1250);
-// }
-//
-// if (timerIndex) {
-//     clearTimeout(timerIndex);
-// }
-//
-// timerIndex = setTimeout(rollIndex, 5000);
+function rollIndex() {
+    index++;
 
-// inBox.innerHTML += inBox.innerHTML;
-// inBox.style.width = inBoxLi.length * 1250 + "px";   //设置ul的宽度
-// console.log(inBox.offsetWidth);
+    if (index === 9) {
+        index = 0;
+    }
 
+    console.log(index);
+    startMove(index * 1250);
+}
+
+if (indexTimer) {
+    clearTimeout(indexTimer);
+}
+
+indexTimer = setInterval(rollIndex, 3000);
 
 
-/*//滚动一次
+/*//实现多次滚动
+var timer = null;
+var indexTimer = null;
+var index = 0 ;
+
+function startMove(endPos) {
+    var startPos = outBox.scrollLeft;
+    var speed;
+
+    if (timer) {
+        clearInterval(timer);
+    }
+
+    timer = setInterval(move, 20);
+
+    function move() {
+        speed = (endPos - startPos) / 10;
+        speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+        startPos += speed;
+
+        console.log(speed, startPos);
+
+        if (Math.abs(endPos - startPos) <= 6) {
+            startPos = endPos;
+            clearInterval(timer);
+        }
+
+        outBox.scrollLeft = startPos;
+    }
+}
+
+function rollIndex() {
+    index++;
+
+    if (index === 9) {
+        index = 0;
+    }
+
+    console.log(index);
+    startMove(index * 1250);
+}
+
+if (indexTimer) {
+    clearTimeout(indexTimer);
+}
+
+indexTimer = setInterval(rollIndex, 3000);*/
+
+
+
+/*//实现单次滚动
 var timer = null;
 
 function startMove(endPos) {

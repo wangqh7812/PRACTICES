@@ -92,3 +92,23 @@ li {
 .active {
     border: 3px solid #000fff;
 }
+
+.left-or-right {
+    width: 1250px;
+    height: 560px;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+}
+
+.left {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.right {
+    width: 50%;
+    height: 100%;
+    float: left;
+}

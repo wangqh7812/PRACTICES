@@ -2,9 +2,15 @@ var outBox = document.getElementById("outer");
 var inBox = document.getElementById("inner");
 var inBoxLi = inBox.getElementsByTagName("li");
 
-var smallPic =
+var smallPic = document.getElementById("pic-small");
+var smallPicLi = smallPic.getElementsByTagName("li");
+var smallPicImg = document.getElementsByClassName("pic-small-title");
 
-var oBtn = document.getElementById("start");
+console.log(smallPicImg.length);
+
+var picTitle = document.getElementById("pic-title");
+
+// var oBtn = document.getElementById("start");
 
 // inBox.innerHTML += inBox.innerHTML;
 inBox.style.width = inBoxLi.length * 1250 + "px";   //设置ul的宽度
@@ -15,7 +21,8 @@ var timer = null;
 var indexTimer = null;
 var index = 0 ;
 
-function startMove(endPos) {
+//单次滚动
+function oneMove(endPos) {
     var startPos = outBox.scrollLeft;
     var speed;
 
@@ -36,12 +43,13 @@ function startMove(endPos) {
             startPos = endPos;
             clearInterval(timer);
         }
-
         outBox.scrollLeft = startPos;
     }
 }
 
+//连续单次滚动
 function rollIndex() {
+
     index++;
 
     if (index === 9) {
@@ -49,16 +57,40 @@ function rollIndex() {
     }
 
     console.log(index);
-    startMove(index * 1250);
+
+    //实现索引根据大图滚动
+    for (var i = 0; i < smallPicLi.length; i++) {
+        var j = index;
+        smallPicLi[i].className = "";
+        smallPicLi[j].className = "active";
+    }
+
+    //实现标题根据大图滚动
+    picTitle.innerText = smallPicImg[j].alt;
+
+    oneMove(index * 1250);
+}
+
+for (var i = 0; i < smallPicLi.length; i++) {
+    smallPicLi[i].onclick = function () {
+        if (indexTimer) {
+            clearInterval(indexTimer);
+        }
+        for (var j = 0; j < smallPicLi.length; j++) {
+            smallPicLi[j].className = "";
+        }
+        this.className = "active";
+        this.index = index;
+        startMove(index * 1250);
+        indexTimer = setInterval(rollIndex,3000);
+    }
 }
 
 if (indexTimer) {
-    clearTimeout(indexTimer);
+    clearInterval(indexTimer);
 }
 
-indexTimer = setInterval(rollIndex, 3000);
-
-
+indexTimer = setInterval(rollIndex,3000);
 /*//实现多次滚动
 var timer = null;
 var indexTimer = null;

@@ -43,11 +43,17 @@ function indexMove() {
         clearInterval(indexTimer);
     }
     indexTimer = setInterval(function () {
+        var a = index;
+        picTitleLi[a].className = "";
         index++;
         console.log(index);
         if (index === 9) {
             index = 0;
         }
+
+        var b = index;
+        picTitleLi[b].className = "active";
+
         oneMove(index * 1250);
         },3000)
 }

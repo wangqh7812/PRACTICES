@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>manth彩票</title>
+    <style>
+        .clearfix:after{
+            content:"";
+            clear: both;
+            display: block;
+            height: 0;
+        }
+        .clearfix{
+            zoom: 1;
+        }
+        .main{
+            background: antiquewhite;
+            font: 20px Microsoft YaHei;
+            width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+        }
+        .left{
+            float: left;
+            width: 390px;
+            height: 430px;
+            background: aliceblue;
+        }
+        .right{
+            float: right;
+            width: 390px;
+            height: 430px;
+            /*background: aliceblue;*/
+        }
+        .num-ground{
+            padding-right:10px;
+            padding-top: 10px;
+        }
+        .num{
+            float: left;
+            border-radius: 50%;
+            background: #bbc9f6;
+            width: 43px;
+            height: 43px;
+            margin-left: 10px;
+            margin-top: 10px;
+            line-height: 43px;
+        }
+        div.num-selected{
+            background: #6781f8;
+        }
+        .betting-times{
+            margin-top: 30px;
+            border: blueviolet 1px solid;
+            border-radius: 5px;
+            background-color: aliceblue;
+            width: 60px;
+            height: 40px;
+            font: 20px Microsoft YaHei;
+        }
+        .b-t{
+            margin-top: 20px;
+            width:100px;
+            height: 30px;
+            border-radius: 5px;
+            border: #1f79cf 1px solid;
+            background-color:#1f79cf;
+            margin-right: 30px;
+            font: 20px  Microsoft YaHei;
+            color: #fff;
+        }
+        .b-n{
+            float: left;
+            border-radius: 50%;
+            background: #6781f8;
+            width: 43px;
+            height: 43px;
+            margin-left: 10px;
+            margin-top: 10px;
+            line-height: 43px;
+            text-align: center;
+        }
+        .betting-num{
+            padding: 10px 0 0 10px;
+            width: 390px;
+            height: 110px;
+            background: aliceblue
+        }
+        .betting-num:first-child{
+            text-align: left;
+        }
+        .l-b{
+            margin: 20px 0;
+            width:100px;
+            height: 30px;
+            border-radius: 5px;
+            border: #ee3e3e 1px solid;
+            background-color:#ee3e3e;
+            margin-right: 30px;
+            font: 20px  Microsoft YaHei;
+            color: #fff;
+        }
+        .lotterty-num{
+            padding: 10px 0 0 10px;
+            width: 390px;
+            height: 230px;
+            background: aliceblue
+        }
+        .l-n{
+            float: left;
+            border-radius: 50%;
+            background: #f7726b;
+            width: 43px;
+            height: 43px;
+            margin-left: 10px;
+            margin-top: 10px;
+            line-height: 43px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .word{
+            text-align: left;
+        }
+        .lotterty-num .same{
+            margin-top: 10px;
+            border: none;
+            width: 350px;
+            height: 90px;
+            font: 20px  Microsoft YaHei;
+            color:#ee3e3e;
+            text-align: center;
+            line-height: 90px;
+        }
+        .same span{
+            vertical-align: middle;
+            line-height: 20px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<div class="main clearfix">
+    <div class="left">
+        <div class="num-ground clearfix">
+            <div class="num num1">1</div>
+            <div class="num num2">2</div>
+            <div class="num num3">3</div>
+            <div class="num num4">4</div>
+            <div class="num num5">5</div>
+            <div class="num num6">6</div>
+            <div class="num num7">7</div>
+            <div class="num num8">8</div>
+            <div class="num num9">9</div>
+            <div class="num num10">10</div>
+            <div class="num num11">11</div>
+            <div class="num num12">12</div>
+            <div class="num num13">13</div>
+            <div class="num num14">14</div>
+            <div class="num num15">15</div>
+            <div class="num num16">16</div>
+            <div class="num num17">17</div>
+            <div class="num num18">18</div>
+            <div class="num num19">19</div>
+            <div class="num num20">20</div>
+            <div class="num num21">21</div>
+            <div class="num num22">22</div>
+            <div class="num num23">23</div>
+            <div class="num num24">24</div>
+            <div class="num num25">25</div>
+            <div class="num num26">26</div>
+            <div class="num num27">27</div>
+            <div class="num num28">28</div>
+            <div class="num num29">29</div>
+            <div class="num num30">30</div>
+            <div class="num num31">31</div>
+        </div>
+        <div class="betting">
+            投注数量
+            <input class="betting-times" type="text">
+            注
+        </div>
+        <div class="betting-type">
+            <input class="b-t robot" type="button" value="机选">
+            <input class="b-t person" type="button" value="投注">
+        </div>
+    </div>
+    <div class="right">
+        <div class="betting-num clearfix">
+            <div>选号结果</div>
+            <div class="b-n num1"></div>
+            <div class="b-n num2"></div>
+            <div class="b-n num3"></div>
+            <div class="b-n num4"></div>
+            <div class="b-n num5"></div>
+            <div class="b-n num6"></div>
+            <div class="b-n num7"></div>
+        </div>
+        <div class="lottery">
+            <input class="l-b lottery-enter" type="button" value="开奖">
+            <input class="l-b cancel" type="button" value="取消">
+        </div>
+        <div class="lotterty-num clearfix">
+            <div class="word">开奖结果</div>
+            <div class="l-n num1"></div>
+            <div class="l-n num2"></div>
+            <div class="l-n num3"></div>
+            <div class="l-n num4"></div>
+            <div class="l-n num5"></div>
+            <div class="l-n num6"></div>
+            <div class="l-n num7"></div>
+            <div class="word word1">开奖信息</div>
+            <div class="same">
+                <span class="same-word"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var num=document.getElementsByClassName("num");
+    var bN=document.getElementsByClassName("b-n");
+    var lN=document.getElementsByClassName("l-n");
+    var sameWord=document.getElementsByClassName("same-word")[0];
+    var bettingTimes=document.getElementsByClassName('betting-times')[0];
+    var len=num.length;
+    var numArr=[];
+    var lNArr=[];
+    // var numColor=["#6781f8"];
+    //产生随机数，for循环一个个生成，生成的对应num【i】变色，若后面与前面重合则再生成一个，，生成数添加到投注号码区
+    document.getElementsByClassName('robot')[0].onclick =function (){
+        for (var i=0;i<31;i++){
+            num[i].classList.remove("num-selected");
+            num[i].("data-select","unselect");
+        }
+        for (i=0;i<7;i++){
+            numArr[i]=parseInt(Math.random()*31+1);
+            if (num[numArr[i]-1].getAttribute("data-select")!="select") {
+                num[numArr[i]-1].classList.add("num-selected");
+                num[numArr[i]-1].setAttribute("data-select","select");
+            }else{
+                numArr.pop();
+                i--;
+            }
+        }
+    };
+    document.getElementsByClassName('lottery-enter')[0].onclick =function (){
+        for (var i=0;i<31;i++){
+            num[i].setAttribute("data-lottery","unselect");
+        }
+        for (i=0;i<7;i++){
+            lNArr[i]=parseInt(Math.random()*31+1);
+            if (num[lNArr[i]-1].getAttribute("data-lottery")!="select") {
+                num[lNArr[i]-1].setAttribute("data-lottery","select");
+                lN[i].innerHTML=lNArr[i];
+            }else{
+                lNArr.pop();
+                i--;
+            }
+        }
+        var nn=0;
+        for (var i=0;i<7;i++){
+            for (var j=0;j<7;j++){
+                if(lNArr[i]==numArr[j]){
+                    nn++;
+                }
+            }
+        }
+        console.log(sameWord);
+        switch (nn) {
+            case 0:
+                console.log(0);
+                sameWord.innerHTML="很遗憾，没有中奖" + "</br>" +"奖金等级：无；奖金额度：0元"+"</br>" +"总奖金：0元";
+                break;
+            case 1:
+                console.log(1);
+                sameWord.innerHTML="恭喜，你中奖了" + "</br>" +"奖金等级：五；奖金额度：100元"+"</br>" +"总奖金："+bettingTimes.value*100+"元";
+                break;
+            case 2:
+                console.log(2);
+                sameWord.innerHTML="恭喜，你中奖了" + "</br>" +"奖金等级：四；奖金额度：200元"+"</br>" +"总奖金："+bettingTimes.value*200+"元";
+                break;
+            case 3:
+                sameWord.innerHTML="恭喜，你中奖了" + "</br>" +"奖金等级：四；奖金额度：200元"+"</br>" +"总奖金："+bettingTimes.value*200+"元";
+                break;
+            case 4:
+                sameWord.innerHTML="恭喜，你中奖了" + "</br>" +"奖金等级：三；奖金额度：300元"+"</br>" +"总奖金："+bettingTimes.value*300+"元";
+                break;
+            case 5:
+                sameWord.innerHTML="恭喜，你中奖了" + "</br>" +"奖金等级：三；奖金额度：300元"+"</br>" +"总奖金："+bettingTimes.value*300+"元";
+                break;
+            case 6:
+                sameWord.innerHTML="恭喜，你中奖了" + "</br>" +"奖金等级：二；奖金额度：500元"+"</br>" +"总奖金："+bettingTimes.value*500+"元";
+                break;
+            case 7:
+                sameWord.innerHTML="恭喜，你中奖了" + "</br>" +"奖金等级：一；奖金额度：1000元"+"</br>" +"总奖金："+bettingTimes.value*1000+"元";
+                break;
+            default:
+                break;
+        }
+    };
+    document.getElementsByClassName('person')[0].onclick =function (){
+        if (bettingTimes.value=="") {
+            alert("请选择投注数量");
+            return;
+        }
+        for (var i=0;i<7;i++) {
+            bN[i].innerHTML=numArr[i];
+        }
+    };
+</script>
+</body>
+</html>

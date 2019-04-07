@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.clear-fix {
+    *zoom: 1; /*兼容IE6,IE7。因为IE6和7没有一些元素*/
+}
+
+.clear-fix:after {
+    display: block;
+    content: '';
+    clear: both;
+    height: 0;
+}
+
+.main {
+    background: #FAEBD7;
+    font: 20px Microsoft YaHei;
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.left {
+    float: left;
+    width: 390px;
+    height: 430px;
+    background: #F0F8FF;
+}
+
+.right{
+    float: right;
+    width: 390px;
+    height: 430px;
+    /*background: #F0F8FF;*/
+}
+
+.left-title {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.left-num-box li {
+    width: 43px;
+    height: 43px;
+    margin-left: 10px;
+    margin-top: 10px;
+    background: #bbc9f6;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.left-times {
+    width: 100%;
+    height: 43px;
+    line-height: 43px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.left-times input {
+    width: 40px;
+    height: 20px;
+    border-radius: 3px;
+}
+
+.left-btn {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.left-btn-random {
+    width: 100px;
+    height: 30px;
+    border-radius: 3px;
+    background: #6781f8;
+    float: left;
+    margin-left: 50px;
+}
+
+.left-btn-confirm {
+    width: 100px;
+    height: 30px;
+    border-radius: 3px;
+    background: #6781f8;
+    float: left;
+    margin-left: 90px;
+}
+
+.right-top {
+    width: 100%;
+    height: 100px;
+    background: #F0F8FF;
+}
+
+.right-top-title {
+    float: left;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.right-choose-show {
+    width: 100%;
+    height: 63px;
+    float: left;
+}
+
+.right-choose-show li {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    background: #f7726b;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-mid {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.right-btn-boom {
+    width: 100px;
+    height: 30px;
+    border-radius: 3px;
+    background: #ee3e3e;
+    float: left;
+    margin-left: 50px;
+}
+
+.right-btn-return {
+    width: 100px;
+    height: 30px;
+    border-radius: 3px;
+    background: #ee3e3e;
+    float: left;
+    margin-left: 90px;
+}
+
+.right-bottom {
+    width: 100%;
+    height: 260px;
+    margin-top: 20px;
+    background: #F0F8FF;
+}
+
+.right-bottom-title {
+    float: left;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.right-lottery-choose {
+    width: 100%;
+    height: 63px;
+    float: left;
+}
+
+.right-lottery-choose li {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    background: #f7726b;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-lottery-msg-title {
+    float: left;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    /*margin-top: 10px;*/
+}
+
+.right-lottery-msg-text {
+    color: #ee3e3e;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10px;
+}

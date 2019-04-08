@@ -60,6 +60,10 @@ li {
     border-radius: 50%;
 }
 
+.num-selected {
+    background: #6781f8 !important;
+}
+
 .left-times {
     width: 100%;
     height: 43px;

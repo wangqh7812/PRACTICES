@@ -110,7 +110,7 @@ rollIndex();
 
 //添加索引控制
 for (var i = 0; i < smallPicLi.length; i++) {
-    smallPicLi[i].index = i;
+    // smallPicLi[i].index = i;
     smallPicLi[i].onclick = function () {
         if (indexTimer) {
             clearInterval(indexTimer);

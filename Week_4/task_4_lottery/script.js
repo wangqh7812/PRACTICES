@@ -15,9 +15,18 @@ function addNumToArr() {
     return aArr;
 }
 
+//将剩余的数从aArr里面删除
+function delNumFromArr() {
+    for (var i = 0; i < 25; i++) {
+        aArr.pop();
+    }
+    return aArr;
+}
+
 //从数组aArr随机选取七个数字
 function getRandomNum() {
-    // addNumToArr();
+    //先生成
+    addNumToArr();
     // console.log(aArr);
     var a = 30;
     for (var i = 0; i < 7; i++) {
@@ -29,14 +38,18 @@ function getRandomNum() {
         // console.log(aArr);
         a--;
     }
+    //再删除
+    delNumFromArr();
+    // console.log(aArr);
     return aRandomNum;
 }
 
 // console.log(aArr);
 // console.log(aRandomNum);
 
+//给随机按钮添加事件
 randomBtn.onclick = function () {
-    console.log(aRandomNum.length);
+    // console.log(aRandomNum.length);
     if (aRandomNum.length > 0) {
         aRandomNum.splice(0,aRandomNum.length);
     }
@@ -49,12 +62,14 @@ randomBtn.onclick = function () {
         var temp = aLeftNum[i].innerText;
         // console.log(temp);
         for (var j = 0; j < 7; j++) {
-            // console.log(aRandomNum[j]);
+            console.log(aRandomNum[j]);
             if ( aRandomNum[j] === temp) {
                 aLeftNum[i].className = "left-num num-selected";
             }
         }
     }
 };
+
+
 
 

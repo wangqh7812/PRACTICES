@@ -151,7 +151,7 @@ confirmBtn.onclick = function () {
     else {
         alert("请先选择7个心仪的数字！")
     }
-}
+};
 
 //开奖！！！
 function getBoom () {
@@ -202,12 +202,12 @@ boomBtn.onclick = function () {
     else {
         alert("请先选择心仪的数字并确认再来开奖！")
     }
-}
+};
 
 //还原
 returnBtn.onclick = function () {
     location.reload();
-}
+};
 
 
 

@@ -48,7 +48,7 @@
                 </div>
                 <div class="left-times">
                     <lable>
-                        投注数量：<input class="betting-times" type="text"> 注
+                        投注数量：<input id="betting-times" class="betting-times" type="text"> 注
                     </lable>
                 </div>
                 <div class="left-btn clear-fix">
@@ -61,40 +61,40 @@
                     <div class="right-top-title">你的选号</div>
                     <div class="right-choose-show">
                         <ul class="clear-fix">
-                            <li class="choose-num choose-num1"></li>
-                            <li class="choose-num choose-num2"></li>
-                            <li class="choose-num choose-num3"></li>
-                            <li class="choose-num choose-num4"></li>
-                            <li class="choose-num choose-num5"></li>
-                            <li class="choose-num choose-num6"></li>
-                            <li class="choose-num choose-num7"></li>
+                            <li class="choose-num"></li>
+                            <li class="choose-num"></li>
+                            <li class="choose-num"></li>
+                            <li class="choose-num"></li>
+                            <li class="choose-num"></li>
+                            <li class="choose-num"></li>
+                            <li class="choose-num"></li>
                         </ul>
                     </div>
                 </div>
                 <div class="right-mid clear-fix">
-                    <div class="right-btn-boom">开奖</div>
-                    <div class="right-btn-return">还原</div>
+                    <div id="right-btn-boom" class="right-btn-boom">开奖</div>
+                    <div id="right-btn-return" class="right-btn-return">还原</div>
                 </div>
                 <div class="right-bottom clear-fix">
                     <div class="right-bottom-title">开奖结果</div>
                     <div class="right-lottery-choose">
                         <ul class="clear-fix">
-                            <li class="lottery-choose lottery-choose1"></li>
-                            <li class="lottery-choose lottery-choose2"></li>
-                            <li class="lottery-choose lottery-choose3"></li>
-                            <li class="lottery-choose lottery-choose4"></li>
-                            <li class="lottery-choose lottery-choose5"></li>
-                            <li class="lottery-choose lottery-choose6"></li>
-                            <li class="lottery-choose lottery-choose7"></li>
+                            <li class="lottery-choose"></li>
+                            <li class="lottery-choose"></li>
+                            <li class="lottery-choose"></li>
+                            <li class="lottery-choose"></li>
+                            <li class="lottery-choose"></li>
+                            <li class="lottery-choose"></li>
+                            <li class="lottery-choose"></li>
                         </ul>
                     </div>
                     <div class="right-lottery-msg">
                         <div class="right-lottery-msg-title">中奖信息</div>
                         <div class="right-lottery-msg-text">
-                            <p>等待开奖!!!</p>
-                            <p>中奖等级：<span>0</span> 等奖</p>
-                            <p>奖金额度：<span>0</span> 元</p>
-                            <p>奖金总额：<span>0</span> 元</p>
+                            <p id="boom-msg">等待开奖!!!</p>
+                            <p>中奖等级：<span id="boom-level">0</span> 等奖</p>
+                            <p>奖金额度：<span>100</span> 元</p>
+                            <p>奖金总额：<span id="total-money">0</span> 元</p>
                         </div>
                     </div>
                 </div>

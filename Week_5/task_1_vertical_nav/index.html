@@ -3,8 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <title>垂直导航</title>
+
+    <style>
+        .wrapper {
+            width: 100px;
+            margin: 200px auto 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .nav {
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border: 1px solid #000000;
+            box-sizing: border-box;
+            margin-top: 2px;
+            cursor: pointer;
+        }
+
+        .nav:first-child {
+            margin-top: 0;
+        }
+
+        .nav-child-box, .nav-child-box-open {
+            width: 100px;
+            height: 0;
+            margin-top: 2px;
+            overflow: hidden;
+        }
+
+        .nav-child {
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border: 1px solid #000000;
+            box-sizing: border-box;
+            margin-top: 2px;
+        }
+
+        .nav-child:first-child {
+            margin-top: 0;
+        }
+
+        
+    </style>
 </head>
 <body>
-    
+    <div class="wrapper">
+        <div class="nav">选项一</div>
+        <div class="nav-child-box">
+            <div class="nav-child">子选项1</div>
+            <div class="nav-child">子选项2</div>
+            <div class="nav-child">子选项3</div>
+        </div>
+        <div class="nav">选项二</div>
+        <div class="nav-child-box">
+            <div class="nav-child">子选项1</div>
+            <div class="nav-child">子选项2</div>
+            <div class="nav-child">子选项3</div>
+        </div>
+        <div class="nav">选项三</div>
+        <div class="nav-child-box">
+            <div class="nav-child">子选项1</div>
+            <div class="nav-child">子选项2</div>
+            <div class="nav-child">子选项3</div>
+        </div>
+        <div class="nav">选项四</div>
+        <div class="nav-child-box">
+            <div class="nav-child">子选项1</div>
+            <div class="nav-child">子选项2</div>
+            <div class="nav-child">子选项3</div>
+        </div>
+    </div>
+
+    <script>
+        var navBtn = document.getElementsByClassName("nav");
+        var navBox = document.getElementsByClassName("nav-child-box");
+
+        var openTimer = null, closeTimer = null;
+
+        function open(e) {
+            console.log(e.offsetHeight);
+
+            var nowHeight = e.offsetHeight;
+
+            if (openTimer) {
+                clearInterval(openTimer);
+            }
+
+            openTimer = setInterval(doOpen,20);
+
+            function doOpen() {
+                var s = 94 - nowHeight;
+                var openSpeed = Math.floor( s / 10 ) + 1;
+
+                if (s > 1) {
+                    nowHeight += openSpeed;
+                }
+                else {
+                    nowHeight = 94;
+                    clearInterval(openTimer);
+                }
+
+                e.style.height = nowHeight + "px";
+                // console.log(nowHeight,e.offsetHeight);
+
+                return nowHeight;
+            }
+        }
+
+        function closeBox() {
+            for (var i = 0; i < navBox.length; i++) {
+                navBox[i].index = i;
+                if (navBox[i].className == "nav-child-box nav-child-box-open") {
+
+                    console.log(this);
+
+                    if (closeTimer) {
+                        clearInterval(closeTimer);
+                    }
+                    closeTimer = setInterval(doClose, 20);
+
+                    function doClose() {
+                        var nowHeight = 94;
+                        var closeSpeed = Math.floor( nowHeight / 10 ) + 1;
+
+                        if (nowHeight > 1) {
+                            nowHeight -= closeSpeed;
+                        }
+                        else {
+                            nowHeight = 0;
+                            clearInterval(closeTimer);
+                        }
+
+                        this.style.height = nowHeight + "px";
+                    }
+                }
+            }
+        }
+
+        for (var i = 0; i < navBtn.length; i++) {
+            navBtn[i].index = i;
+            navBtn[i].onclick = function () {
+                var j = this.index;
+                open(navBox[j]);
+                // closeBox();
+                navBox[j].className = "nav-child-box nav-child-box-open";
+                // console.log(navBox[this.index]);
+            }
+        }
+    </script>
 </body>
 </html>

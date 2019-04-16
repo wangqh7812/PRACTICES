@@ -148,7 +148,9 @@
                 var j = this.index;
 
                 var promise = new Promise(function (resolve, reject) {
-                    open(navBox[j]);
+                    setTimeout(function () {
+                        open(navBox[j]);
+                    }, 600);
                     resolve();
                 });
 

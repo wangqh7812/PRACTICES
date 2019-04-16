@@ -19,6 +19,7 @@
             height: 30px;
             line-height: 30px;
             text-align: center;
+            background-color: #00c4ff;
             border: 1px solid #000000;
             box-sizing: border-box;
             margin-top: 2px;
@@ -88,7 +89,6 @@
         var openTimer = null, closeTimer = null;
 
         function open(e) {
-            console.log(e.offsetHeight);
 
             var nowHeight = e.offsetHeight;
 
@@ -117,33 +117,28 @@
             }
         }
 
-        function closeBox() {
-            for (var i = 0; i < navBox.length; i++) {
-                navBox[i].index = i;
-                if (navBox[i].className == "nav-child-box nav-child-box-open") {
+        function closeBox(e) {
+            var nowHeight = e.offsetHeight;
 
-                    console.log(this);
+            if (closeTimer) {
+                clearInterval(closeTimer);
+            }
 
-                    if (closeTimer) {
-                        clearInterval(closeTimer);
-                    }
-                    closeTimer = setInterval(doClose, 20);
+            closeTimer = setInterval(doClose, 20);
 
-                    function doClose() {
-                        var nowHeight = 94;
-                        var closeSpeed = Math.floor( nowHeight / 10 ) + 1;
+            function doClose() {
+                var closeSpeed = Math.floor(nowHeight / 10) + 1;
 
-                        if (nowHeight > 1) {
-                            nowHeight -= closeSpeed;
-                        }
-                        else {
-                            nowHeight = 0;
-                            clearInterval(closeTimer);
-                        }
-
-                        this.style.height = nowHeight + "px";
-                    }
+                if (nowHeight > 1) {
+                    nowHeight -= closeSpeed;
+                } else {
+                    nowHeight = 0;
+                    clearInterval(closeTimer);
                 }
+
+                e.style.height = nowHeight + "px";
+
+                return nowHeight;
             }
         }
 
@@ -152,9 +147,14 @@
             navBtn[i].onclick = function () {
                 var j = this.index;
                 open(navBox[j]);
-                // closeBox();
+                for (var i = 0; i < navBox.length; i++) {
+                    if (navBox[i].className == "nav-child-box nav-child-box-open") {
+                        var openedBox = navBox[i];
+                        closeBox(openedBox);
+                        openedBox.className = "nav-child-box";
+                    }
+                }
                 navBox[j].className = "nav-child-box nav-child-box-open";
-                // console.log(navBox[this.index]);
             }
         }
     </script>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>垂直导航</title>
+    <title>垂直导航（Promise版本）</title>
 
     <style>
         .wrapper {
@@ -51,7 +51,7 @@
             margin-top: 0;
         }
 
-        
+
     </style>
 </head>
 <body>
@@ -111,7 +111,7 @@
                 }
 
                 e.style.height = nowHeight + "px";
-                // console.log(nowHeight,e.offsetHeight);
+                console.log(nowHeight,e.offsetHeight);
 
                 return nowHeight;
             }
@@ -146,15 +146,22 @@
             navBtn[i].index = i;
             navBtn[i].onclick = function () {
                 var j = this.index;
-                open(navBox[j]);
-                for (var i = 0; i < navBox.length; i++) {
-                    if (navBox[i].className == "nav-child-box nav-child-box-open") {
-                        var openedBox = navBox[i];
-                        closeBox(openedBox);
-                        openedBox.className = "nav-child-box";
+
+                var promise = new Promise(function (resolve, reject) {
+                    open(navBox[j]);
+                    resolve();
+                });
+
+                promise.then(function () {
+                    for (var i = 0; i < navBox.length; i++) {
+                        if (navBox[i].className == "nav-child-box nav-child-box-open") {
+                            var openedBox = navBox[i];
+                            closeBox(openedBox);
+                            openedBox.className = "nav-child-box";
+                        }
                     }
-                }
-                navBox[j].className = "nav-child-box nav-child-box-open";
+                    navBox[j].className = "nav-child-box nav-child-box-open";
+                });
             }
         }
     </script>

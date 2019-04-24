@@ -9,7 +9,7 @@ var smallPicImg = document.getElementsByClassName("pic-small-title");
 var leftBtn = document.getElementById("btn-left");
 var rightBtn = document.getElementById("btn-right");
 
-console.log(smallPicImg.length);
+// console.log(smallPicImg.length);
 
 var picTitle = document.getElementById("pic-title");
 
@@ -19,7 +19,7 @@ var picTitle = document.getElementById("pic-title");
 inBox.style.width = inBoxLi.length * 1250 + "px";   //设置ul的宽度
 // console.log(inBox.offsetWidth);
 
-//大标题：实现多次滚动并且带索引
+//  大标题：实现多次滚动并且带索引
 var timer = null;
 var indexTimer = null;
 var index = 0 ;
@@ -27,34 +27,40 @@ var index = 0 ;
 //实现单次滚动1，正在用的
 function oneMove1(endPos) {
     var startPos = outBox.scrollLeft;
-    var speed = Math.abs(endPos - startPos) / 10;
+    var speed;
 
     if (timer) {
         clearInterval(timer);
     }
     timer = setInterval(function () {
-        speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+        speed = Math.floor(Math.abs(endPos - startPos) / 10);
+        // console.log(speed);
+        // speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
 
         if (startPos < endPos) {
-            startPos += speed;
-            console.log(speed, startPos);
             if (Math.abs(endPos - startPos) <= 6) {
                 startPos = endPos;
                 clearInterval(timer);
             }
+            startPos += speed;
+            // console.log(speed, startPos);
         }
         else {
-            startPos -= speed;
-            console.log(speed, startPos);
             if (Math.abs(endPos - startPos) <= 6) {
                 startPos = endPos;
                 clearInterval(timer);
             }
+            startPos -= speed;
+            // console.log(speed, startPos);
         }
+
         outBox.scrollLeft = startPos;
+        console.log(outBox.scrollLeft);
+        // return outBox.scrollLeft;
     }, 20);
 }
-//实现单次滚动2，也可以用的
+
+//实现单次滚动2，也可以用的，但是现在没用
 function oneMove2(target) {
     var start = outBox.scrollLeft;
     var s = Math.abs(target - start);
@@ -102,6 +108,7 @@ function rollIndex() {
         }
         //实现标题跟随大图滚动
         picTitle.innerText = smallPicImg[j].alt;
+
         oneMove1(index * 1250);
     },2000);
 }
@@ -110,17 +117,20 @@ rollIndex();
 
 //添加索引控制
 for (var i = 0; i < smallPicLi.length; i++) {
-    // smallPicLi[i].index = i;
+    smallPicLi[i].index = i;    //不能少
     smallPicLi[i].onclick = function () {
         if (indexTimer) {
             clearInterval(indexTimer);
         }
+
         for (var j = 0; j < smallPicLi.length; j++) {
             smallPicLi[j].className = "";
         }
+
         this.className = "active";
         index = this.index;
-        console.log(index);
+        // console.log(index);
+
         oneMove1(index * 1250);
         rollIndex();
     }
@@ -130,11 +140,11 @@ for (var i = 0; i < smallPicLi.length; i++) {
 //向左
 leftBtn.onclick = function () {
     if (indexTimer) {
-        clearInterval(indexTimer)
+        clearInterval(indexTimer);
     }
 
     //实现索引跟随图片滚动
-    var a = index;
+    var a = index;  //index在前面已经跟随图片滚动而改变了
     smallPicLi[a].className = "";
     index--;
 
@@ -142,31 +152,30 @@ leftBtn.onclick = function () {
         index = 8;  //index是0-8的，共9张图片
     }
 
-    var b = index;
+    var b = index;  //新的index
     smallPicLi[b].className = "active";
 
-    oneMove1(index * 1250);
+    oneMove1(index * 1250); //从新的index继续开始滚动
     rollIndex();
 };
 //向右
 rightBtn.onclick = function () {
     if (indexTimer) {
-        clearInterval(indexTimer)
+        clearInterval(indexTimer);
     }
-
     //实现索引跟随图片滚动
-    var a = index;
+    var a = index;  //index在前面已经跟随图片滚动而改变了
     smallPicLi[a].className = "";
     index++;
 
     if (index === 9) {
-        index = 0;
+        index = 0;  //如果是8，那么还加了1，所以是9
     }
 
-    var b = index;
+    var b = index;  //新的index
     smallPicLi[b].className = "active";
 
-    oneMove1(index * 1250);
+    oneMove1(index * 1250); //从新的index继续开始滚动
     rollIndex();
 };
 

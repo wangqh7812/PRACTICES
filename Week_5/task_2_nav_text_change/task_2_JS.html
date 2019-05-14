@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>导航文字的变化（JS实现）</title>
+
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            font-weight: 500;
+            font-size: 24px;
+            text-decoration: none;
+            color: #fa8c00;
+        }
+
+        .wrap {
+            width: 1000px;
+            margin: 100px auto;
+        }
+
+        .nav {
+            width: 1000px;
+            overflow: hidden;
+        }
+
+        .nav li {
+            width: 180px;
+            height: 45px;
+            line-height: 45px;
+            float: left;
+            margin-left: 20px;
+            border-radius: 2px;
+            background-color: #008cfa;
+        }
+
+        .nav li:nth-of-type(1) {
+            margin-left: 10px;
+        }
+
+        .nav li a {
+            display: block;
+            /*padding-left: 10px;*/
+            text-align: left;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <ul id="nav" class="nav">
+            <li><a href="#" style="padding-left: 10px">选项一</a></li>
+            <li><a href="#" style="padding-left: 10px">选项二</a></li>
+            <li><a href="#" style="padding-left: 10px">选项三</a></li>
+            <li><a href="#" style="padding-left: 10px">选项四</a></li>
+            <li><a href="#" style="padding-left: 10px">选项五</a></li>
+        </ul>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

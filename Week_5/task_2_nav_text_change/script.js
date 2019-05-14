@@ -4,44 +4,71 @@ var aLi = nav.getElementsByTagName("li"),
     aA = nav.getElementsByTagName("a");
 
 var speed = 0.88,
-    timer = null;
+    timerR = null,
+    timerL = null;
 
-function animate (index) {
-    var temp = aA[index];
-    var l = parseInt(temp.style.paddingLeft);
+function animateR(index) {
+    var tempIn = aA[index];
+    var lIn = parseInt(tempIn.style.paddingLeft);
 
-    console.log(l);
+    console.log(lIn);
 
-    if (timer) {
-        clearInterval(timer)
+    if (timerR) {
+        clearInterval(timerR)
     }
-    else {
-        timer = setInterval(function () {
-            l += speed;
-            temp.style.paddingLeft = l + "px";
 
-            if (l >= 54) {
-                clearInterval(timer);
-                temp.style.paddingLeft = l + "px";
-            }
+    //回去的不能停，回去的停了就影响上一个归位了
+    // if (timerL) {
+    //     clearInterval(timerL)
+    // }
 
-            return l;
-        },20)
-    }
+    timerR = setInterval(function () {
+        lIn += speed;
+        tempIn.style.paddingLeft = lIn + "px";
+        if (lIn >= 54) {
+            clearInterval(timerR);
+            tempIn.style.paddingLeft = 54 + "px";
+        }
+        return lIn;
+    },20)
 }
 
+function animateL(index) {
+    var tempOut = aA[index];
+    var lOut = parseInt(tempOut.style.paddingLeft);
 
+    console.log(lOut);
+
+    if (timerL) {
+        clearInterval(timerL)
+    }
+
+    if (timerR) {
+        clearInterval(timerR)
+    }
+
+    timerL = setInterval(function () {
+        lOut -= speed;
+        tempOut.style.paddingLeft = lOut + "px";
+        if (lOut <= 10) {
+            clearInterval(timerL);
+            tempOut.style.paddingLeft = 10 + "px";
+        }
+        return lOut;
+    },20)
+}
 
 for (var i = 0; i < aLi.length; i++) {
     aLi[i].index = i;
     aLi[i].onmouseover = function () {
         var a = this.index;
         console.log(a);
-        animate(a);
+        animateR(a);
     };
 
     aLi[i].onmouseout = function () {
         var b = this.index;
         console.log(b);
+        animateL(b);
     }
 }

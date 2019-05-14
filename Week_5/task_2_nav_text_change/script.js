@@ -7,7 +7,7 @@ var speed = 0.88,
     timerR = null,
     timerL = null;
 
-function animateR(index) {
+function animationR(index) {
     var tempIn = aA[index];
     var lIn = parseInt(tempIn.style.paddingLeft);
 
@@ -33,7 +33,7 @@ function animateR(index) {
     },20)
 }
 
-function animateL(index) {
+function animationL(index) {
     var tempOut = aA[index];
     var lOut = parseInt(tempOut.style.paddingLeft);
 
@@ -63,12 +63,11 @@ for (var i = 0; i < aLi.length; i++) {
     aLi[i].onmouseover = function () {
         var a = this.index;
         console.log(a);
-        animateR(a);
+        animationR(a);
     };
-
     aLi[i].onmouseout = function () {
         var b = this.index;
         console.log(b);
-        animateL(b);
+        animationL(b);
     }
 }

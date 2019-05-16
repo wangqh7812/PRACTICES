@@ -8,42 +8,113 @@
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         .wrap {
             position: relative;
             width: 800px;
+            height: 640px;
             margin: 100px auto;
             overflow: hidden;
         }
 
         .in-wrap {
-            width: 100%;
-            height: 100%;
-        }
-
-        .box {
-            width: 160px;
-            height: 320px;
-        }
-
-        .box1 {
-            width: 320px;
+            position: absolute;
+            width: 800px;
             height: 640px;
-            background-color: ;
+            top: 0;
+            left: 240px;
         }
 
+        /*.in-in-wrap {*/
+        /*    width: 800px;*/
+        /*    height: 640px;*/
+        /*    position: relative;*/
+        /*}*/
+        
+        .box {
+            width: 140px;
+            height: 320px;
+            float: left;
+            margin-left: 20px;
+            margin-top: 320px;
+            border: 1px solid #000000;
+            text-align: center;
+        }
 
+        .box:nth-of-type(1) {
+            margin-left: 10px;
+            background-color: #ff0000;
+        }
+
+        .box:nth-of-type(2) {
+            background-color: #ff5800;
+        }
+
+        .box:nth-of-type(3) {
+            background-color: #ffb000;
+        }
+
+        .box:nth-of-type(4) {
+            background-color: #ffff00;
+        }
+
+        .active {
+            width: 300px;
+            height: 640px;
+            margin-top: 0;
+        }
     </style>
 </head>
 <body>
     <div class="wrap">
         <div class="in-wrap">
-            <div class="box box1">box1</div>
-            <div class="box box2">box2</div>
-            <div class="box box3">box3</div>
-            <div class="box box4">box4</div>
+<!--            <div class="in-in-wrap">-->
+                <div class="box active">box1</div>
+                <div class="box">box2</div>
+                <div class="box">box3</div>
+                <div class="box">box4</div>
+<!--            </div>-->
         </div>
     </div>
+
+    <script type="text/javascript">
+        var boxList = document.getElementsByClassName("box");
+        var outWrap = document.getElementsByClassName("in-wrap");
+
+        var index = 0;
+
+        var speedIn,
+            speedOut;
+
+        var timerIn = null,
+            timerOut = null;
+
+        for (var i = 0; i < boxList.length; i++){
+            boxList[i].index = i;
+            boxList[i].onclick = function () {
+                var nowClick = this.index;
+
+            }
+        }
+
+        function posAnimation(temp) {
+            speedOut = (180 * temp) / 100;
+            var nowPos = outWrap.offsetLeft;
+
+            if (timerOut) {
+                clearInterval(timerOut);
+            }
+
+            timerOut = setInterval(function () {
+                if (temp > 0) {
+                    nowPos = nowPos - speedOut;
+                }
+
+            })
+        }
+
+    </script>
 </body>
 </html>

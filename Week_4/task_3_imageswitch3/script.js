@@ -33,29 +33,34 @@ function oneMove1(endPos) {
         clearInterval(timer);
     }
     timer = setInterval(function () {
-        speed = Math.floor(Math.abs(endPos - startPos) / 10);
-        // console.log(speed);
+        // 因为是向下取整，所以会导致小于1的时候，speed会变成0，这样就不滚动了，所以要+1
+        speed = Math.floor(Math.abs(endPos - startPos) / 10) + 1;
+        // console.log("speed:" + speed);
         // speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
 
         if (startPos < endPos) {
-            if (Math.abs(endPos - startPos) <= 6) {
+            if (Math.abs(endPos - startPos) <= 2) {
                 startPos = endPos;
                 clearInterval(timer);
             }
-            startPos += speed;
-            // console.log(speed, startPos);
+            else {
+                startPos += speed;
+            }
+            // console.log("speed:" + speed, "startPosition" + startPos);
         }
         else {
-            if (Math.abs(endPos - startPos) <= 6) {
+            if (Math.abs(endPos - startPos) <= 2) {
                 startPos = endPos;
                 clearInterval(timer);
             }
-            startPos -= speed;
-            // console.log(speed, startPos);
+            else{
+                startPos -= speed;
+            }
+            // console.log("speed:" + speed, "startPosition" + startPos);
         }
 
         outBox.scrollLeft = startPos;
-        console.log(outBox.scrollLeft);
+        // console.log("now outBox scrollLeft:" + outBox.scrollLeft);
         // return outBox.scrollLeft;
     }, 20);
 }

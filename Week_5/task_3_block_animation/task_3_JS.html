@@ -14,37 +14,31 @@
         .wrap {
             position: relative;
             width: 800px;
-            height: 640px;
+            height: 600px;
             margin: 100px auto;
+            border: 1px solid #000000;
+            text-align: center;
             overflow: hidden;
         }
 
         .in-wrap {
             position: absolute;
-            width: 800px;
-            height: 640px;
-            top: 0;
-            left: 240px;
+            width: 500px;
+            height: 400px;
+            top: 100px;
+            left: 300px;
         }
-
-        /*.in-in-wrap {*/
-        /*    width: 800px;*/
-        /*    height: 640px;*/
-        /*    position: relative;*/
-        /*}*/
         
         .box {
-            width: 140px;
-            height: 320px;
+            width: 100px;
+            height: 200px;
             float: left;
-            margin-left: 20px;
-            margin-top: 320px;
+            margin-top: 200px;
             border: 1px solid #000000;
             text-align: center;
         }
 
         .box:nth-of-type(1) {
-            margin-left: 10px;
             background-color: #ff0000;
         }
 
@@ -61,60 +55,23 @@
         }
 
         .active {
-            width: 300px;
-            height: 640px;
+            width: 200px;
+            height: 400px;
             margin-top: 0;
         }
     </style>
 </head>
 <body>
     <div class="wrap">
+        中|线
         <div class="in-wrap">
-<!--            <div class="in-in-wrap">-->
-                <div class="box active">box1</div>
-                <div class="box">box2</div>
-                <div class="box">box3</div>
-                <div class="box">box4</div>
-<!--            </div>-->
+            <div class="box active">box1</div>
+            <div class="box">box2</div>
+            <div class="box">box3</div>
+            <div class="box">box4</div>
         </div>
     </div>
 
-    <script type="text/javascript">
-        var boxList = document.getElementsByClassName("box");
-        var outWrap = document.getElementsByClassName("in-wrap");
-
-        var index = 0;
-
-        var speedIn,
-            speedOut;
-
-        var timerIn = null,
-            timerOut = null;
-
-        for (var i = 0; i < boxList.length; i++){
-            boxList[i].index = i;
-            boxList[i].onclick = function () {
-                var nowClick = this.index;
-
-            }
-        }
-
-        function posAnimation(temp) {
-            speedOut = (180 * temp) / 100;
-            var nowPos = outWrap.offsetLeft;
-
-            if (timerOut) {
-                clearInterval(timerOut);
-            }
-
-            timerOut = setInterval(function () {
-                if (temp > 0) {
-                    nowPos = nowPos - speedOut;
-                }
-
-            })
-        }
-
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

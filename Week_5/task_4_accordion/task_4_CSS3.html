@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>手风琴效果</title>
+
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .wrap {
+            position: relative;
+            width: 700px;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .box {
+            position: absolute;
+            width: 400px;
+            height: 300px;
+            border: 1px solid #000000;
+            text-align: left;
+        }
+
+        .box:nth-of-type(1) {
+            background-color: #ff0000;
+            left: 0;
+        }
+
+        .box:nth-of-type(2) {
+            background-color: #ff5800;
+            left: 100px;
+            -webkit-transition: left 0.8s;
+            -moz-transition: left 0.8s;
+            -ms-transition: left 0.8s;
+            -o-transition: left 0.8s;
+            transition: left 0.8s;
+        }
+
+        .box:nth-of-type(3) {
+            background-color: #ffb000;
+            left: 200px;
+            -webkit-transition: left 0.8s;
+            -moz-transition: left 0.8s;
+            -ms-transition: left 0.8s;
+            -o-transition: left 0.8s;
+            transition: left 0.8s;
+        }
+
+        .box:nth-of-type(4) {
+            background-color: #ffff00;
+            left: 300px;
+            -webkit-transition: left 0.8s;
+            -moz-transition: left 0.8s;
+            -ms-transition: left 0.8s;
+            -o-transition: left 0.8s;
+            transition: left 0.8s;
+        }
+
+        .animation1 {
+            left: 400px !important;
+            -webkit-transition: left 0.8s;
+            -moz-transition: left 0.8s;
+            -ms-transition: left 0.8s;
+            -o-transition: left 0.8s;
+            transition: left 0.8s;
+        }
+
+        .animation2 {
+            left: 500px !important;
+            -webkit-transition: left 0.8s;
+            -moz-transition: left 0.8s;
+            -ms-transition: left 0.8s;
+            -o-transition: left 0.8s;
+            transition: left 0.8s;        }
+
+        .animation3 {
+            left: 600px !important;
+            -webkit-transition: left 0.8s;
+            -moz-transition: left 0.8s;
+            -ms-transition: left 0.8s;
+            -o-transition: left 0.8s;
+            transition: left 0.8s;        }
+
+        /*@keyframes anim1 {*/
+        /*    0% {*/
+        /*        left: 100px;*/
+        /*    }*/
+        /*    100% {*/
+        /*        left: 400px;*/
+        /*    }*/
+        /*}*/
+
+        /*@keyframes anim2 {*/
+        /*    0% {*/
+        /*        left: 200px;*/
+        /*    }*/
+        /*    100% {*/
+        /*        left: 500px;*/
+        /*    }*/
+        /*}*/
+
+        /*@keyframes anim3 {*/
+        /*    0% {*/
+        /*        left: 300px;*/
+        /*    }*/
+        /*    100% {*/
+        /*        left: 600px;*/
+        /*    }*/
+        /*}*/
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+    </div>
+
+    <script type="text/javascript">
+        var aDiv = document.getElementsByClassName("box");
+
+        for (var i = 0; i < aDiv.length; i++) {
+            aDiv[i].index = i;
+            aDiv[i].onmouseover = function () {
+                var a = this.index;
+
+                switch (a) {
+                    case 0:
+                        for (var o = 1; o < aDiv.length; o++) {
+                            aDiv[o].className = "box animation" + o;
+                        }
+                        break;
+
+                    case 1:
+                        for (var p = 2; p < aDiv.length; p++) {
+                            aDiv[p].className = "box animation" + p;
+                        }
+                        break;
+
+                    case 2:
+                        for (var q = 3; q < aDiv.length; q++) {
+                            aDiv[q].className = "box animation" + q;
+                        }
+                        break;
+                }
+            };
+
+            aDiv[i].onmouseout = function () {
+                for (var j = 0; j < aDiv.length; j++) {
+                    aDiv[j].className = "box";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

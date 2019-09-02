@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>跑马灯效果</title>
+</head>
+<body>
+    <div id="app">
+        <input type="button" value="开始" @click="startDo">
+        <input type="button" value="停止" @click="stopDo">
+        <h4>{{ msg }}</h4>
+    </div>
+
+    <script src="vue.js"></script>
+    <script>
+        var app = new Vue ({
+            el: '#app',
+            data: {
+            	msg: '这是一个跑马灯效果！',
+                timer: null  // 在data上定义一个定时器ID1
+            },
+            methods: {
+            	startDo (){
+            		// var _this = this
+            		// setInterval(function () {
+			        //     console.log(_this.msg)  // 实例app中，如果想要获得data里面的数据又或者想要调用methods中的方法，必须通过this.数据属性名又或者this.方法名来进行访问，这里的this就是new出来app实例对象
+			        //     var start = _this.msg.substring(0, 1)
+			        //     var end = _this.msg.substring(1)
+			        //     _this.msg = end + start
+		            // },300)
+		            this.timer = setInterval(() => {
+			            console.log(this.msg)  // 实例app中，如果想要获得data里面的数据又或者想要调用methods中的方法，必须通过this.数据属性名又或者this.方法名来进行访问，这里的this就是new出来app实例对象
+			            var start = this.msg.substring(0, 1)
+			            var end = this.msg.substring(1)
+			            this.msg = end + start
+		            },300)
+                },
+                stopDo () {
+            		clearInterval(this.timer)
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -21,6 +21,9 @@
                     Name: <input type="text" class="form-control" v-model="name">
                 </label>
                 <input type="button" value="添加" class="btn btn-primary" @click="add">
+                <label>
+                    搜索内容的关键字：<input type="text" class="form-control" v-model="keywords">
+                </label>
             </div>
         </div>
         <table class="table table-bordered table-hove table-striped">
@@ -33,7 +36,9 @@
             </tr>
             </thead>
             <tbody>
-            <tr v-for="item in list" :key="item.id">
+            <!-- 自定义一个search方法，同时把所有关键字通过传参的形式传递给了search方法 -->
+            <!-- 在search方法内部通过for循环把符合条件的数据放到一个新数组中，然后再用v-for进行展示出来 -->
+            <tr v-for="item in search(keywords)" :key="item.id">
                 <td>{{ item.id }}</td>
                 <td>{{ item.name }}</td>
                 <td>{{ item.ctime }}</td>
@@ -51,6 +56,7 @@
 			data: {
 				id: '',
 				name: '',
+                keywords: '',
 				list: [
 					{ id: 1, name: 'BENZ', ctime: new Date() },
 					{ id: 2, name: 'BMW', ctime: new Date() }
@@ -78,7 +84,26 @@
 					//     }
 					// })
 					// this.list.splice(index, 1)
-				}
+				},
+                search(keywords) {
+					// var newList = []
+                    // this.list.forEach(item => {
+                    // 	if (item.name.indexOf(keywords) !== -1) {
+                    // 		newList.push(item)
+                    //     }
+                    // })
+                    // return newList
+
+                    // forEach some filter findIndex 这些都是数组的新方法
+                    // 都会对数组中的每一项进行遍历进行相关操作
+
+                    return this.list.filter(item => {
+                    	if (item.name.includes(keywords)) {
+                    		return item
+                        }
+                    })
+                    // return newList
+                }
 			}
 		})
     </script>

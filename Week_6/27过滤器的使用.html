@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过滤器的使用</title>
+</head>
+<body>
+    <div id="app">
+        {{ msg | msgFormat("牛逼", "轰轰") | test }}
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        // Vue.filter('msgFormat', function (msg, arg) {
+        //     return msg.replace(/单纯/g, arg)
+        // })
+
+        Vue.filter('msgFormat', function (msg, arg1, arg2) {
+            return msg.replace(/单纯/g, arg1 + arg2)
+        })
+
+        Vue.filter('test', function (msg) {
+	        return msg + '========'
+        })
+
+		var app = new Vue({
+			el: '#app',
+			data: {
+                msg: '天真的我，开心的我，自由的我，风骚的我，无敌的我，单纯的我'
+			},
+			methods: {
+
+			}
+		})
+    </script>
+</body>
+</html>

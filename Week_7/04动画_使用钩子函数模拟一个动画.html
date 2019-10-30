@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+    <div id ="app">
+        <input type="button" value="点我" @click="flag=!flag">
+        <transition 
+            @before-enter="beforeEnter"
+            @enter="enter"
+            @after-enter="afterEnter">
+            <div v-show="flag">Demo</div>
+        </transition>
+    </div>
+
+    <script>
+        // 创建Vue实例,得到 ViewModel
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                flag: false
+            },
+            methods: {
+                beforeEnter(el){
+                    el.style.opacity = 0
+                    el.style.fontSize = "0.5em"
+                    console.log("beforeEnter done")
+                },
+                enter(el){
+                    el.offsetWidth
+                    el.style.opacity = 1
+                    el.style.fontSize = "1.4em"
+                    el.style.transition = "all 0.6s ease"
+                    console.log("enter done")
+                    // done()
+                },
+                afterEnter(el){
+                    el.offsetWidth
+                    el.style.fontSize = "1em"
+                    el.style.transition = "all 0.3s ease"
+                    console.log("afterEnter done")
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
